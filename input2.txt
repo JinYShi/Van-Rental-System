@@ -1,0 +1,28 @@
+#These test will primarily test the Print function
+
+#Load all caravans in, 5 Autos and 4 manuals
+Location CBD Wicked Automatic
+Location CBD Zeppelin Automatic
+Location CBD Floyd Automatic
+Location Penrith Queen Manual
+Location Cremorne Ramones Automatic
+Location Cremorne Nirvana Automatic
+Location Sutherland Purple Manual
+Location Sutherland Hendrix Manual
+Location Sutherland Eagle Manual
+
+Request 1 23 Apr 8 12 Apr 11 3 Automatic 1 Manual
+Request 2 23 Mar 25 12 Mar 26 3 Automatic 1 Manual
+Request 3 23 Apr 12 12 Apr 15 3 Automatic 1 Manual
+Request 4 23 Mar 28 12 Apr 1 3 Automatic 1 Manual
+Request 5 23 Apr 2 12 Apr 5 5 Automatic 4 Manual
+
+#Test the print function ordering
+#Should be in caravan decleration order, then date order
+Print CBD
+Print Penrith
+
+#Test printing on cancelled bookings
+Print Sutherland
+Cancel 5
+Print Sutherland
